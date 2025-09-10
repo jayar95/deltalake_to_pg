@@ -1,0 +1,23 @@
+[package]
+name = "deltalake_to_pg"
+version = "0.1.0"
+edition = "2024"
+
+
+[dependencies]
+tokio          = { version = "1",  features = ["full"] }
+
+bytes          = "1"
+futures-util   = "0.3"
+walkdir        = "2"
+dotenvy        = "0.15"
+anyhow         = "1"
+
+datafusion     = { version = "47.0", default-features = false, features = ["parquet"] }
+arrow          = "55.0"
+deltalake      = { version = "0.26.2", features = ["datafusion", "datafusion-ext"] }
+native-tls = "0.2.14"
+tokio-postgres = { version = "0.7.13" }
+postgres-native-tls = "0.5.1"
+postgres-types = "0.2.9"
+futures = "0.3.31"
